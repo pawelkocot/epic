@@ -58,7 +58,7 @@ class Event
     }
 
     /**
-     * @return Reservation[]
+     * @return ArrayCollection
      */
     public function getReservations()
     {

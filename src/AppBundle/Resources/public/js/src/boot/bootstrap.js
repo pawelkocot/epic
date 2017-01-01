@@ -1,18 +1,18 @@
-import {compose, applyMiddleware, createStore} from 'redux'
-import thunkMiddleware from 'redux-thunk'
-import {hashHistory} from 'react-router'
-import {syncHistoryWithStore} from 'react-router-redux'
-import createReducer from './createReducer'
+import {compose, applyMiddleware, createStore} from 'redux';
+import thunkMiddleware from 'redux-thunk';
+import {hashHistory} from 'react-router';
+import {syncHistoryWithStore} from 'react-router-redux';
+import createReducer from './createReducer';
 
 export default (initialState = {}) => {
-  const middleware = [thunkMiddleware]
-  const enhancers = []
+  const middleware = [thunkMiddleware];
+  const enhancers = [];
 
   if (process.env.NODE_ENV === 'development') {
-    const devToolsExtension = window.devToolsExtension
+    const devToolsExtension = window.devToolsExtension;
 
     if (devToolsExtension) {
-      enhancers.push(devToolsExtension())
+      enhancers.push(devToolsExtension());
     }
   }
 
@@ -23,9 +23,9 @@ export default (initialState = {}) => {
       applyMiddleware(...middleware),
       ...enhancers
     )
-  )
+  );
 
-  const history = syncHistoryWithStore(hashHistory, store)
+  const history = syncHistoryWithStore(hashHistory, store);
 
-  return {store, history}
-}
+  return {store, history};
+};

@@ -1,4 +1,4 @@
-import renderApplication from './renderApplication'
-import bootstrap from './bootstrap'
+import renderApplication from './renderApplication';
+import bootstrap from './bootstrap';
 
-export {renderApplication, bootstrap}
+export {renderApplication, bootstrap};

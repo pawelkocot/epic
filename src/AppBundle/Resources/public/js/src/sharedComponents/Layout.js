@@ -1,8 +1,8 @@
-import React from 'react'
-import {Grid, Row, Col} from 'react-bootstrap'
-import Navigation from './Navigation'
+import React from 'react';
+import {Grid, Row, Col} from 'react-bootstrap';
+import Navigation from './Navigation';
 
-import 'bootstrap/dist/css/bootstrap.min.css'
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 export default ({children}) => (
   <div>
@@ -15,4 +15,4 @@ export default ({children}) => (
       </Row>
     </Grid>
   </div>
-)
+);

@@ -2,6 +2,6 @@ import React from 'react';
 
 export default () => (
   <div>
-    SECOND
+    Add Event
   </div>
-)
+);
