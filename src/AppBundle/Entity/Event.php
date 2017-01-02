@@ -21,6 +21,11 @@ class Event
     /**
      * @ORM\Column(type="string", length=255, nullable=false)
      */
+    private $group;
+
+    /**
+     * @ORM\Column(type="string", length=255, nullable=false)
+     */
     private $name;
 
     /**
@@ -39,6 +44,22 @@ class Event
     public function getId()
     {
         return $this->id;
+    }
+
+    /**
+     * @return string
+     */
+    public function getGroup()
+    {
+        return $this->group;
+    }
+
+    /**
+     * @param string $group
+     */
+    public function setGroup($group)
+    {
+        $this->group = $group;
     }
 
     /**

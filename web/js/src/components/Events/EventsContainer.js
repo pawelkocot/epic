@@ -9,7 +9,6 @@ class EventsContainer extends React.Component {
   }
 
   render() {
-    console.log(this.props);
     const {loading, loaded, failure, errorMessage, events} = this.props;
 
     return (
