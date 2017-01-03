@@ -1,0 +1,10 @@
+services:
+    model.event.create:
+        class: AppBundle\Model\Event\CreateEventModel
+        arguments:
+          - '@repository.event'
+
+    model.events.list:
+        class: AppBundle\Model\Event\EventsListModel
+        arguments:
+          - '@repository.event'

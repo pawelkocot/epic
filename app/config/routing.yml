@@ -1,3 +1,12 @@
 app:
-    resource: "@AppBundle/Controller/"
+    resource: "@AppBundle/Controller/Admin"
     type:     annotation
+    prefix:   /admin
+
+api:
+    resource: "@AppBundle/Controller/Api"
+    type:     annotation
+    prefix:   /api
+
+logout:
+    path: /logout

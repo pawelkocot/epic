@@ -24,6 +24,9 @@ security:
     main:
       anonymous: ~
       http_basic: ~
+      logout:
+          path:   /logout
+          target: /admin
 
   access_control:
     # require ROLE_ADMIN for /admin*

@@ -11,28 +11,11 @@ class HomepageController extends Controller
 {
     /**
      *
-     * @Route("/admin/", name="admin_homepage")
-     * @Template
+     * @Route("/")
+     * @Template()
      */
-    public function indexAction(Request $request)
+    public function indexAction()
     {
-        dump($request);
-//        $event = new Event();
-//        $event->setName('dasdad');
-//
-//        $reservation = new Reservation();
-//        $reservation->setEvent($event);
-//        $reservation->setFirstName('adasdas');
-//        $reservation->setLastName('adasdas');
-//        $reservation->setEmail('adasdas');
-//        $reservation->setPhone('adasdas');
-//        $reservation->setBirthDate('adasdas');
-//
-//        $em = $this->getDoctrine()->getManager();
-//        $em->persist($event);
-//        $em->persist($reservation);
-//        $em->flush();
-
         return [];
     }
 }

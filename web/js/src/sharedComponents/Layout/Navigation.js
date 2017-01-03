@@ -12,5 +12,8 @@ export default ({children}) => (
         <NavItem eventKey={2}>Add event</NavItem>
       </LinkContainer>
     </Nav>
+    {/*<Nav pullRight>*/}
+      {/*<NavItem eventKey={1} href="/logout">Logout</NavItem>*/}
+    {/*</Nav>*/}
   </Navbar>
 );

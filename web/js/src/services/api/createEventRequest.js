@@ -2,7 +2,7 @@ import fetch from 'isomorphic-fetch';
 
 export default (data) => new Promise((resolve, reject) => {
 
-  const url = '/admin/api/createEvent';
+  const url = '/api/createEvent';
   const options = {
     method: 'POST',
     credentials: 'include',
@@ -17,6 +17,9 @@ export default (data) => new Promise((resolve, reject) => {
     .then(response => {
       if (response.status == 200) {
         response.json().then(resolve);
+      }
+      else if (response.status == 401) {
+        reject('401 Unauthorized');
       }
       else {
         response.json().then(reject);

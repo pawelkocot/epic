@@ -1,0 +1,12 @@
+services:
+    controller.api.create_event:
+        class: AppBundle\Controller\Api\CreateEventController
+        arguments:
+          - '@model.event.create'
+          - '@response_creator'
+
+    controller.api.events_list:
+        class: AppBundle\Controller\Api\EventsListController
+        arguments:
+          - '@model.events.list'
+          - '@response_creator'

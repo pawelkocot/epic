@@ -1,1 +1,1 @@
-export {loadEvents} from './events/actions';
+export {loadEvents, createEventSuccess} from './events/actions';
