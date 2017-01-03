@@ -2,28 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="0c481f73-80eb-4f9e-9a1f-48bd16ab7771" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/js/src/components/Events/EventsTable.js" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/AppBundle/Controller/Admin/AdminApiController.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/js/src/components/Events/EventsList.js" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/epictime.iml" afterPath="$PROJECT_DIR$/.idea/epictime.iml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gitignore" afterPath="$PROJECT_DIR$/.gitignore" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/config/config.yml" afterPath="$PROJECT_DIR$/app/config/config.yml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/config/routing.yml" afterPath="$PROJECT_DIR$/app/config/routing.yml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/config/security.yml" afterPath="$PROJECT_DIR$/app/config/security.yml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/composer.lock" afterPath="$PROJECT_DIR$/composer.lock" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/AppBundle/Controller/Admin/HomepageController.php" afterPath="$PROJECT_DIR$/src/AppBundle/Controller/Admin/HomepageController.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/AppBundle/Entity/Event.php" afterPath="$PROJECT_DIR$/src/AppBundle/Entity/Event.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/js/package.json" afterPath="$PROJECT_DIR$/web/js/package.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/js/src/components/AddEvent/submitForm.js" afterPath="$PROJECT_DIR$/web/js/src/components/AddEvent/submitForm.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/js/src/components/Events/EventsContainer.js" afterPath="$PROJECT_DIR$/web/js/src/components/Events/EventsContainer.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/js/src/components/Routing.js" afterPath="$PROJECT_DIR$/web/js/src/components/Routing.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/js/src/services/api/createEventRequest.js" afterPath="$PROJECT_DIR$/web/js/src/services/api/createEventRequest.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/js/src/services/api/loadEventsRequest.js" afterPath="$PROJECT_DIR$/web/js/src/services/api/loadEventsRequest.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/js/src/sharedComponents/EventForm/EventForm.js" afterPath="$PROJECT_DIR$/web/js/src/sharedComponents/EventForm/EventForm.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/js/src/sharedComponents/Layout/Navigation.js" afterPath="$PROJECT_DIR$/web/js/src/sharedComponents/Layout/Navigation.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/js/src/state/actions.js" afterPath="$PROJECT_DIR$/web/js/src/state/actions.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/js/src/state/events/actions.js" afterPath="$PROJECT_DIR$/web/js/src/state/events/actions.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/js/src/state/events/reducer.js" afterPath="$PROJECT_DIR$/web/js/src/state/events/reducer.js" />
     </list>
     <ignored path="epictime.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -46,11 +26,21 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="EventsContainer.js" pinned="false" current-in-tab="true">
+      <file leaf-file-name="EventsContainer.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/web/js/src/components/Events/EventsContainer.js">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="117">
               <caret line="9" column="3" lean-forward="true" selection-start-line="9" selection-start-column="3" selection-end-line="9" selection-end-column="3" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name=".gitignore" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/.gitignore">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="72">
+              <caret line="4" column="7" lean-forward="false" selection-start-line="4" selection-start-column="7" selection-end-line="4" selection-end-column="7" />
               <folding />
             </state>
           </provider>
@@ -176,7 +166,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/AppBundle/Resources/public/js/src/components/Events/EventsList.js" />
         <option value="$PROJECT_DIR$/src/AppBundle/Resources/public/js/src/services/api/loadEventsRequest.js" />
         <option value="$PROJECT_DIR$/src/AppBundle/Resources/public/js/src/components/Events/EventsContainer.js" />
         <option value="$PROJECT_DIR$/src/AppBundle/Resources/public/js/src/components/Routing.js" />
@@ -227,6 +216,7 @@
         <option value="$PROJECT_DIR$/web/js/src/components/Events/EventRow.js" />
         <option value="$PROJECT_DIR$/web/js/src/components/Events/EventsTable.js" />
         <option value="$PROJECT_DIR$/web/js/src/components/Events/EventsContainer.js" />
+        <option value="$PROJECT_DIR$/.gitignore" />
       </list>
     </option>
   </component>
@@ -901,7 +891,7 @@
       <workItem from="1483273300842" duration="5221000" />
       <workItem from="1483278792275" duration="481000" />
       <workItem from="1483301539355" duration="9727000" />
-      <workItem from="1483388413408" duration="11344000" />
+      <workItem from="1483388413408" duration="11409000" />
     </task>
     <task id="LOCAL-00001" summary="work in progress">
       <created>1483279166316</created>
@@ -917,15 +907,22 @@
       <option name="project" value="LOCAL" />
       <updated>1483388496255</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="work in progress">
+      <created>1483403667261</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1483403667262</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="54475000" />
+    <option name="totallyTimeSpent" value="54540000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="53" y="24" width="1313" height="744" extended-state="6" />
-    <editor active="true" />
+    <editor active="false" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24940805" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -935,7 +932,7 @@
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Mongo Explorer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.38235295" sideWeight="0.49723756" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.38235295" sideWeight="0.49723756" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -972,16 +969,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/AppBundle/DependencyInjection/AppExtension.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="144">
-          <caret line="14" column="23" lean-forward="true" selection-start-line="14" selection-start-column="23" selection-end-line="14" selection-end-column="23" />
-          <folding>
-            <element signature="e#49#112#0#PHP" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/AppBundle/AppBundle.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="126">
@@ -1396,6 +1383,14 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="117">
           <caret line="9" column="3" lean-forward="true" selection-start-line="9" selection-start-column="3" selection-end-line="9" selection-end-column="3" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.gitignore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="72">
+          <caret line="4" column="7" lean-forward="false" selection-start-line="4" selection-start-column="7" selection-end-line="4" selection-end-column="7" />
           <folding />
         </state>
       </provider>
