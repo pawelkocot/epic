@@ -2,14 +2,12 @@
 
 namespace AppBundle\Controller\Api;
 
-use AppBundle\Model\Event\CreateEventModel;
 use AppBundle\Model\Event\EventsListModel;
 use AppBundle\Services\Response\ResponseCreator;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Method;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Security;
 use Symfony\Component\HttpFoundation\JsonResponse;
-use Symfony\Component\HttpFoundation\Request;
 
 /**
  * @Route(service="controller.api.events_list")

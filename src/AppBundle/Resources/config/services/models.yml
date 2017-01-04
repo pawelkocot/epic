@@ -8,3 +8,8 @@ services:
         class: AppBundle\Model\Event\EventsListModel
         arguments:
           - '@repository.event'
+
+    model.reservations.list:
+        class: AppBundle\Model\Reservations\ReservationsListModel
+        arguments:
+          - '@repository.reservation'

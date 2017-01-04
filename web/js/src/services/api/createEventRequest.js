@@ -15,14 +15,10 @@ export default (data) => new Promise((resolve, reject) => {
 
   fetch(url, options)
     .then(response => {
-      if (response.status == 200) {
+      if (response.status === 200) {
         response.json().then(resolve);
-      }
-      else if (response.status == 401) {
-        reject('401 Unauthorized');
-      }
-      else {
-        response.json().then(reject);
+      } else {
+        reject('Error '+response.status);
       }
     })
     .catch(() => reject('error'));

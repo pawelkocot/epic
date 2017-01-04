@@ -6,7 +6,9 @@ import sortBy from 'lodash/sortBy';
 
 class EventsContainer extends React.Component {
   componentWillMount() {
-    this.props.loadEvents();
+    if (!this.props.loading && !this.props.loaded) {
+      this.props.loadEvents();
+    }
   }
 
   render() {

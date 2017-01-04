@@ -1,7 +1,7 @@
 import fetch from 'isomorphic-fetch';
 
-export default () => new Promise((resolve, reject) => {
-  const url = '/api/events';
+export default (eventId) => new Promise((resolve, reject) => {
+  const url = `/api/reservations/${eventId}`;
   const options = {
     method: 'GET',
     credentials: 'include',
@@ -15,7 +15,8 @@ export default () => new Promise((resolve, reject) => {
     .then(response => {
       if (response.status === 200) {
         response.json().then(resolve);
-      } else {
+      }
+      else {
         reject('Error '+response.status);
       }
     })

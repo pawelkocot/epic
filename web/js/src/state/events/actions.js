@@ -20,6 +20,6 @@ export const loadEvents = () => (dispatch) => {
       console.log(error);
       dispatch(eventsLoadingFailure(error))
     })
-}
+};
 
 export const createEventSuccess = createAction(CREATE_EVENT_SUCCESS);

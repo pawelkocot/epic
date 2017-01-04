@@ -10,3 +10,9 @@ services:
         arguments:
           - '@model.events.list'
           - '@response_creator'
+
+    controller.api.reservations_list:
+        class: AppBundle\Controller\Api\ReservationsListController
+        arguments:
+          - '@model.reservations.list'
+          - '@response_creator'

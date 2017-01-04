@@ -1,21 +1,26 @@
 import React from 'react';
 import {connect} from 'react-redux';
-import {PageHeader, Table} from 'react-bootstrap';
-import {loadEvents} from '../../state/actions';
+import {PageHeader} from 'react-bootstrap';
+import {loadReservations} from '../../state/actions';
+import {hashHistory} from 'react-router';
+import ReservationsTable from './ReservationsTable';
 
 class EventsContainer extends React.Component {
   componentWillMount() {
-    if (!this.props.eventsLoading && !this.props.eventsLoaded) {
-      this.props.loadEvents();
+    if (this.props.event) {
+
+      if (!this.props.reservationsLoading) {
+        this.props.loadReservations(this.props.event.id);
+      }
+
+    } else {
+      hashHistory.push('/');
     }
   }
 
   render() {
-    const {eventsLoading, event} = this.props;
-
-    if (eventsLoading) {
-      return <PageHeader>Loading</PageHeader>
-    }
+    const {event, reservations} = this.props;
+    const {reservationsLoading, reservationsLoadingFailure, reservationsLoadingError, reservationsLoaded} = this.props;
 
     if (!event) {
       return <PageHeader bsClass="danger">Event not found</PageHeader>
@@ -23,26 +28,31 @@ class EventsContainer extends React.Component {
 
     return (
       <div>
-        <PageHeader>Event {event.name} (group: {event.group})</PageHeader>
+        <PageHeader>Event "{event.name}" ID: {event.id}, group: {event.group}</PageHeader>
+
+        {reservationsLoading && <div>Loading reservations...</div>}
+        {reservationsLoadingFailure && <div>Loading reservations failure: {reservationsLoadingError}</div>}
+        {reservationsLoaded && <ReservationsTable reservations={reservations} />}
       </div>
     );
   }
 }
 
-
 const mapStateToProps = (state, props) => {
-  console.log(props);
-  // state.events.events
-  return {
-    eventsLoading: state.events.loading,
-    eventsLoaded: state.events.loaded,
+  const event = state.events.events.find(event => event.id == props.params.id);
 
-    event: state.events.events.find(event => event.id == props.params.id)
+  return {
+    event,
+    reservations: state.reservations.reservations,
+    reservationsLoading: state.reservations.loading,
+    reservationsLoaded: state.reservations.loaded,
+    reservationsLoadingFailure: state.reservations.failure,
+    reservationsLoadingError: state.reservations.errorMessage,
   }
 }
 
 const mapDispatchToProps = {
-  loadEvents
+  loadReservations
 };
 
 export default connect(mapStateToProps, mapDispatchToProps)(EventsContainer);
