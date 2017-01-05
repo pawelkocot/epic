@@ -6,5 +6,4 @@ imports:
 services:
     response_creator:
         class: AppBundle\Services\Response\ResponseCreator
-        arguments:
-          - '@serializer'
+        autowire: true

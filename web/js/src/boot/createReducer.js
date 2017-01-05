@@ -1,13 +1,10 @@
 import {combineReducers} from 'redux';
 import {reducer as formReducer} from 'redux-form';
 import {routerReducer} from 'react-router-redux';
-import eventsReducer from '../state/events/reducer';
-import reservationsReducer from '../state/reservations/reducer';
+import appReducer from '../state/reducer';
 
 export default () => combineReducers({
-  // app: reducer,
+  app: appReducer,
   form: formReducer,
-  routing: routerReducer,
-  events: eventsReducer,
-  reservations: reservationsReducer
+  routing: routerReducer
 });

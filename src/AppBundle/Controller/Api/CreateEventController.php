@@ -3,6 +3,7 @@
 namespace AppBundle\Controller\Api;
 
 use AppBundle\Model\Event\CreateEventModel;
+use AppBundle\Model\EventGroup\EventGroupModel;
 use AppBundle\Services\Response\ResponseCreator;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Method;
@@ -21,13 +22,22 @@ class CreateEventController
     private $createEvent;
 
     /**
+     * @var EventGroupModel
+     */
+    private $eventGroupModel;
+
+    /**
      * @var ResponseCreator
      */
     private $responseCreator;
 
-    public function __construct(CreateEventModel $createEvent, ResponseCreator $responseCreator)
+    public function __construct(
+        CreateEventModel $createEvent,
+        EventGroupModel $eventGroupModel,
+        ResponseCreator $responseCreator)
     {
         $this->createEvent = $createEvent;
+        $this->eventGroupModel = $eventGroupModel;
         $this->responseCreator = $responseCreator;
     }
 
@@ -43,7 +53,13 @@ class CreateEventController
     {
         try {
             $data = json_decode($request->getContent(), true);
-            $event = $this->createEvent->create($data['name'], $data['group']);
+
+            $eventGroup = $this->eventGroupModel->findOrCreate(
+                isset($data['eventGroupId']) ? $data['eventGroupId'] : null,
+                isset($data['group']) ? $data['group'] : null
+            );
+
+            $event = $this->createEvent->create($data['name'], $eventGroup);
 
             return $this->responseCreator->jsonFromEntity($event);
         }

@@ -3,6 +3,7 @@
 namespace AppBundle\Model\Event;
 
 use AppBundle\Entity\Event;
+use AppBundle\Entity\EventGroup;
 use AppBundle\Repository\EventRepository;
 
 class CreateEventModel
@@ -17,11 +18,16 @@ class CreateEventModel
         $this->eventRepository = $eventRepository;
     }
 
-    public function create($name, $group)
+    /**
+     * @param string $name
+     * @param EventGroup $eventGroup
+     * @return Event
+     */
+    public function create($name, EventGroup $eventGroup)
     {
         $event = new Event();
         $event->setName($name);
-        $event->setGroup($group);
+        $event->setEventGroup($eventGroup);
 
         $this->eventRepository->saveEntity($event);
 

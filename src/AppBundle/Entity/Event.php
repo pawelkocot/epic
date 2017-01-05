@@ -20,9 +20,10 @@ class Event
     private $id;
 
     /**
-     * @ORM\Column(name="`group`", type="string", length=255, nullable=false)
+     * @ORM\ManyToOne(targetEntity="EventGroup", cascade={"all"})
+     * @ORM\JoinColumn(name="event_group_id", referencedColumnName="id", nullable=false)
      */
-    private $group;
+    private $eventGroup;
 
     /**
      * @ORM\Column(name="`name`", type="string", length=255, nullable=false)
@@ -48,19 +49,19 @@ class Event
     }
 
     /**
-     * @return string
+     * @param EventGroup $eventGroup
      */
-    public function getGroup()
+    public function setEventGroup(EventGroup $eventGroup)
     {
-        return $this->group;
+        $this->eventGroup = $eventGroup;
     }
 
     /**
-     * @param string $group
+     * @return EventGroup
      */
-    public function setGroup($group)
+    public function getEventGroup()
     {
-        $this->group = $group;
+        return $this->eventGroup;
     }
 
     /**

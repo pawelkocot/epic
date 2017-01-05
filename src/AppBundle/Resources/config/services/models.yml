@@ -1,4 +1,9 @@
 services:
+    model.event_group:
+        class: AppBundle\Model\EventGroup\EventGroupModel
+        arguments:
+          - '@repository.event_group'
+
     model.event.create:
         class: AppBundle\Model\Event\CreateEventModel
         arguments:

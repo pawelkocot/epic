@@ -8,11 +8,9 @@ import ReservationsTable from './ReservationsTable';
 class EventsContainer extends React.Component {
   componentWillMount() {
     if (this.props.event) {
-
       if (!this.props.reservationsLoading) {
         this.props.loadReservations(this.props.event.id);
       }
-
     } else {
       hashHistory.push('/');
     }
@@ -28,7 +26,7 @@ class EventsContainer extends React.Component {
 
     return (
       <div>
-        <PageHeader>Event "{event.name}" ID: {event.id}, group: {event.group}</PageHeader>
+        <PageHeader>Event "{event.name}" ID: {event.id}, group: {event.groupName}</PageHeader>
 
         {reservationsLoading && <div>Loading reservations...</div>}
         {reservationsLoadingFailure && <div>Loading reservations failure: {reservationsLoadingError}</div>}
@@ -39,15 +37,15 @@ class EventsContainer extends React.Component {
 }
 
 const mapStateToProps = (state, props) => {
-  const event = state.events.events.find(event => event.id == props.params.id);
+  const event = state.app.events.events.find(event => parseInt(event.id, 10) === parseInt(props.params.id, 10));
 
   return {
     event,
-    reservations: state.reservations.reservations,
-    reservationsLoading: state.reservations.loading,
-    reservationsLoaded: state.reservations.loaded,
-    reservationsLoadingFailure: state.reservations.failure,
-    reservationsLoadingError: state.reservations.errorMessage,
+    reservations: state.app.reservations.reservations,
+    reservationsLoading: state.app.reservations.loading,
+    reservationsLoaded: state.app.reservations.loaded,
+    reservationsLoadingFailure: state.app.reservations.failure,
+    reservationsLoadingError: state.app.reservations.errorMessage,
   }
 }
 

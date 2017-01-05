@@ -1,18 +1,16 @@
 services:
+    controller.api.event_groups_list:
+        class: AppBundle\Controller\Api\EventGroupsListController
+        autowire: true
+
     controller.api.create_event:
         class: AppBundle\Controller\Api\CreateEventController
-        arguments:
-          - '@model.event.create'
-          - '@response_creator'
+        autowire: true
 
     controller.api.events_list:
         class: AppBundle\Controller\Api\EventsListController
-        arguments:
-          - '@model.events.list'
-          - '@response_creator'
+        autowire: true
 
     controller.api.reservations_list:
         class: AppBundle\Controller\Api\ReservationsListController
-        arguments:
-          - '@model.reservations.list'
-          - '@response_creator'
+        autowire: true

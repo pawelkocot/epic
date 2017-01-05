@@ -4,11 +4,19 @@ import {Button, ButtonToolbar, Label} from 'react-bootstrap';
 import FieldGroup from '../FieldGroup/FieldGroup';
 import validate from './validate';
 
-const EventForm = ({handleSubmit, onSubmit, pristine, submitting, error}) => (
+const EventForm = ({eventGroups, handleSubmit, onSubmit, pristine, submitting, error}) => (
   <form onSubmit={handleSubmit(onSubmit)}>
     {error && <Label bsStyle="danger">{error}</Label>}
     <div>
-      <Field name="group" component={FieldGroup} type="text" label="Group"/>
+      Select event group:&nbsp;
+      <Field name="eventGroupId" component="select" label="">
+        <option></option>
+        {eventGroups.map(eventGroup => <option value={eventGroup.id} key={eventGroup.id}>{eventGroup.name}</option>)}
+      </Field>
+
+      <Field name="group" component={FieldGroup} type="text" label="Or create new group" placeholder="New group"/>
+    </div>
+    <div>
       <Field name="name" component={FieldGroup} type="text" label="Name"/>
     </div>
     <ButtonToolbar>
