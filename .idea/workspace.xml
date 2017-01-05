@@ -2,33 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="0c481f73-80eb-4f9e-9a1f-48bd16ab7771" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/var/SymfonyRequirements.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/var/cache/.gitkeep" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/var/logs/.gitkeep" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/var/sessions/.gitkeep" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gitignore" afterPath="$PROJECT_DIR$/.gitignore" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/config/routing.yml" afterPath="$PROJECT_DIR$/app/config/routing.yml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/AppBundle/Controller/Admin/HomepageController.php" afterPath="$PROJECT_DIR$/src/AppBundle/Controller/Admin/HomepageController.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/AppBundle/Controller/Api/CreateEventController.php" afterPath="$PROJECT_DIR$/src/AppBundle/Controller/Api/CreateEventController.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/AppBundle/Entity/Event.php" afterPath="$PROJECT_DIR$/src/AppBundle/Entity/Event.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/AppBundle/Model/Event/CreateEventModel.php" afterPath="$PROJECT_DIR$/src/AppBundle/Model/Event/CreateEventModel.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/AppBundle/Resources/config/services.yml" afterPath="$PROJECT_DIR$/src/AppBundle/Resources/config/services.yml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/AppBundle/Resources/config/services/controllers.yml" afterPath="$PROJECT_DIR$/src/AppBundle/Resources/config/services/controllers.yml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/AppBundle/Resources/config/services/models.yml" afterPath="$PROJECT_DIR$/src/AppBundle/Resources/config/services/models.yml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/AppBundle/Resources/config/services/repositories.yml" afterPath="$PROJECT_DIR$/src/AppBundle/Resources/config/services/repositories.yml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/AppBundle/Resources/views/Admin/Homepage/index.html.twig" afterPath="$PROJECT_DIR$/src/AppBundle/Resources/views/Admin/Homepage/index.html.twig" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/AppBundle/Services/Response/ResponseCreator.php" afterPath="$PROJECT_DIR$/src/AppBundle/Services/Response/ResponseCreator.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/js/src/boot/createReducer.js" afterPath="$PROJECT_DIR$/web/js/src/boot/createReducer.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/js/src/components/AddEvent/AddEventContainer.js" afterPath="$PROJECT_DIR$/web/js/src/components/AddEvent/AddEventContainer.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/js/src/components/Event/Event.js" afterPath="$PROJECT_DIR$/web/js/src/components/Event/Event.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/js/src/components/Events/EventRow.js" afterPath="$PROJECT_DIR$/web/js/src/components/Events/EventRow.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/js/src/components/Events/EventsContainer.js" afterPath="$PROJECT_DIR$/web/js/src/components/Events/EventsContainer.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/js/src/services/api/createEventRequest.js" afterPath="$PROJECT_DIR$/web/js/src/services/api/createEventRequest.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/js/src/services/api/loadEventsRequest.js" afterPath="$PROJECT_DIR$/web/js/src/services/api/loadEventsRequest.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/js/src/services/api/loadReservationsRequest.js" afterPath="$PROJECT_DIR$/web/js/src/services/api/loadReservationsRequest.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/js/src/sharedComponents/EventForm/EventForm.js" afterPath="$PROJECT_DIR$/web/js/src/sharedComponents/EventForm/EventForm.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/js/src/sharedComponents/EventForm/validate.js" afterPath="$PROJECT_DIR$/web/js/src/sharedComponents/EventForm/validate.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/js/src/state/actions.js" afterPath="$PROJECT_DIR$/web/js/src/state/actions.js" />
     </list>
     <ignored path="epictime.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -121,11 +96,21 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="EventForm.js" pinned="false" current-in-tab="true">
+      <file leaf-file-name="EventForm.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/web/js/src/sharedComponents/EventForm/EventForm.js">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="112">
               <caret line="10" column="31" lean-forward="false" selection-start-line="10" selection-start-column="31" selection-end-line="10" selection-end-column="31" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name=".gitignore" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/.gitignore">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="72">
+              <caret line="4" column="8" lean-forward="false" selection-start-line="4" selection-start-column="8" selection-end-line="4" selection-end-column="8" />
               <folding />
             </state>
           </provider>
@@ -185,7 +170,6 @@
         <option value="$PROJECT_DIR$/web/js/src/components/Routing.js" />
         <option value="$PROJECT_DIR$/web/js/src/state/events/reducer.js" />
         <option value="$PROJECT_DIR$/web/js/src/components/AddEvent/submitForm.js" />
-        <option value="$PROJECT_DIR$/.gitignore" />
         <option value="$PROJECT_DIR$/web/js/src/state/events/actions.js" />
         <option value="$PROJECT_DIR$/src/AppBundle/Controller/Api/EventsListController.php" />
         <option value="$PROJECT_DIR$/src/AppBundle/Repository/ReservationRepository.php" />
@@ -233,6 +217,7 @@
         <option value="$PROJECT_DIR$/web/js/src/state/reducer.js" />
         <option value="$PROJECT_DIR$/web/js/src/components/Events/EventsContainer.js" />
         <option value="$PROJECT_DIR$/web/js/src/sharedComponents/EventForm/EventForm.js" />
+        <option value="$PROJECT_DIR$/.gitignore" />
       </list>
     </option>
   </component>
@@ -879,7 +864,7 @@
       <workItem from="1483530657029" duration="1589000" />
       <workItem from="1483561498142" duration="9391000" />
       <workItem from="1483647113131" duration="300000" />
-      <workItem from="1483647438287" duration="10097000" />
+      <workItem from="1483647438287" duration="10433000" />
     </task>
     <task id="LOCAL-00001" summary="work in progress">
       <created>1483279166316</created>
@@ -916,15 +901,22 @@
       <option name="project" value="LOCAL" />
       <updated>1483567689301</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="work in progress">
+      <created>1483657559494</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1483657559494</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="76019000" />
+    <option name="totallyTimeSpent" value="76355000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="53" y="24" width="1313" height="744" extended-state="6" />
-    <editor active="true" />
+    <editor active="false" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3014996" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -933,7 +925,7 @@
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Mongo Explorer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.38235295" sideWeight="0.49723756" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.38235295" sideWeight="0.49723756" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -971,13 +963,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/vendor/doctrine/dbal/lib/Doctrine/DBAL/Platforms/Keywords/SQLServer2008Keywords.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/vendor/doctrine/dbal/lib/Doctrine/DBAL/Platforms/SQLServer2008Platform.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-810">
@@ -1394,6 +1379,14 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="112">
           <caret line="10" column="31" lean-forward="false" selection-start-line="10" selection-start-column="31" selection-end-line="10" selection-end-column="31" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.gitignore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="72">
+          <caret line="4" column="8" lean-forward="false" selection-start-line="4" selection-start-column="8" selection-end-line="4" selection-end-column="8" />
           <folding />
         </state>
       </provider>
