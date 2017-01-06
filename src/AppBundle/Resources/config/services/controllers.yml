@@ -1,16 +1,16 @@
 services:
-    controller.api.event_groups_list:
-        class: AppBundle\Controller\Api\EventGroupsListController
+    controller.admin_api.event_groups_list:
+        class: AppBundle\Controller\AdminApi\EventGroupsListController
         autowire: true
 
-    controller.api.create_event:
-        class: AppBundle\Controller\Api\CreateEventController
+    controller.admin_api.create_event:
+        class: AppBundle\Controller\AdminApi\CreateEventController
         autowire: true
 
-    controller.api.events_list:
-        class: AppBundle\Controller\Api\EventsListController
+    controller.admin_api.events_list:
+        class: AppBundle\Controller\AdminApi\EventsListController
         autowire: true
 
-    controller.api.reservations_list:
-        class: AppBundle\Controller\Api\ReservationsListController
+    controller.admin_api.reservations_list:
+        class: AppBundle\Controller\AdminApi\ReservationsListController
         autowire: true

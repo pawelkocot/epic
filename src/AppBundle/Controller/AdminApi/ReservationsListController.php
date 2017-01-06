@@ -1,6 +1,6 @@
 <?php
 
-namespace AppBundle\Controller\Api;
+namespace AppBundle\Controller\AdminApi;
 
 use AppBundle\Model\Reservations\ReservationsListModel;
 use AppBundle\Services\Response\ResponseCreator;
@@ -10,7 +10,7 @@ use Sensio\Bundle\FrameworkExtraBundle\Configuration\Security;
 use Symfony\Component\HttpFoundation\JsonResponse;
 use Symfony\Component\HttpFoundation\Request;
 /**
- * @Route(service="controller.api.reservations_list")
+ * @Route(service="controller.admin_api.reservations_list")
  */
 class ReservationsListController
 {

@@ -8,7 +8,7 @@ import submitForm from './submitForm';
 
 class AddEventContainer extends React.Component {
   componentWillMount() {
-    if (!this.props.loading && !this.props.loaded) {
+    if (!this.props.loading) {
       this.props.loadEventGroups();
     }
   }

@@ -1,6 +1,6 @@
 <?php
 
-namespace AppBundle\Controller\Api;
+namespace AppBundle\Controller\AdminApi;
 
 use AppBundle\Model\Event\EventsListModel;
 use AppBundle\Services\Response\ResponseCreator;
@@ -10,7 +10,7 @@ use Sensio\Bundle\FrameworkExtraBundle\Configuration\Security;
 use Symfony\Component\HttpFoundation\JsonResponse;
 
 /**
- * @Route(service="controller.api.events_list")
+ * @Route(service="controller.admin_api.events_list")
  */
 class EventsListController
 {

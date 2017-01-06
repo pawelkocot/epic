@@ -3,6 +3,7 @@ import {Field, reduxForm} from 'redux-form';
 import {Button, ButtonToolbar, Label} from 'react-bootstrap';
 import FieldGroup from '../FieldGroup/FieldGroup';
 import validate from './validate';
+import {normalizeNumber} from '../../services/form/normalizers';
 
 const EventForm = ({eventGroups, handleSubmit, onSubmit, pristine, submitting, error}) => (
   <form onSubmit={handleSubmit(onSubmit)}>
@@ -11,13 +12,37 @@ const EventForm = ({eventGroups, handleSubmit, onSubmit, pristine, submitting, e
       Select event group:&nbsp;
       <Field name="eventGroupId" component="select" label="">
         <option></option>
-        {eventGroups.map(eventGroup => <option value={eventGroup.id} key={eventGroup.id}>{eventGroup.name}</option>)}
+        {eventGroups.map(eventGroup =>
+          <option
+            value={eventGroup.id}
+            key={eventGroup.id}
+          >
+            {eventGroup.name}
+          </option>
+        )}
       </Field>
 
-      <Field name="group" component={FieldGroup} type="text" label="Or create new group" placeholder="New group"/>
+      <Field
+        name="group"
+        component={FieldGroup}
+        type="text"
+        label="Or create new group"
+        placeholder="New group"/>
     </div>
     <div>
-      <Field name="name" component={FieldGroup} type="text" label="Name"/>
+      <Field
+        name="name"
+        component={FieldGroup}
+        type="text"
+        label="Name"/>
+    </div>
+    <div>
+      <Field
+        name="price"
+        normalize={normalizeNumber}
+        component={FieldGroup}
+        type="text"
+        label="Price"/>
     </div>
     <ButtonToolbar>
       <Button type="submit"
@@ -29,5 +54,6 @@ const EventForm = ({eventGroups, handleSubmit, onSubmit, pristine, submitting, e
 
 export default reduxForm({
   form: 'EventForm',
+  enableReinitialize: true,
   validate
 })(EventForm);

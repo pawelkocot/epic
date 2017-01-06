@@ -4,6 +4,6 @@ app:
     prefix:   /admin
 
 api:
-    resource: "@AppBundle/Controller/Api"
+    resource: "@AppBundle/Controller/AdminApi"
     type:     annotation
-    prefix:   /
+    prefix:   /adminApi

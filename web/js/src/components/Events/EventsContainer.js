@@ -41,7 +41,7 @@ const mapStateToProps = state => {
 
   const events = sortBy(state.app.events.events, event => event.id).reverse();
   let eventGroups = events.reduce((groups, event) => {
-    if (!groups.find(group => group.id == event.groupId)) {
+    if (!groups.find(group => group.id === event.groupId)) {
       groups.push({
         id: event.groupId,
         name: event.groupName

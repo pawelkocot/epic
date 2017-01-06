@@ -1,6 +1,6 @@
 <?php
 
-namespace AppBundle\Controller\Api;
+namespace AppBundle\Controller\AdminApi;
 
 use Symfony\Component\HttpFoundation\JsonResponse;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
@@ -12,7 +12,7 @@ use Sensio\Bundle\FrameworkExtraBundle\Configuration\Method;
 class RootController
 {
     /**
-     * @Route("/", name="api_root")
+     * @Route("/", name="admin_api_root")
      * @Method({"GET"})
      *
      * @return JsonResponse

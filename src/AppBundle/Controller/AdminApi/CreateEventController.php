@@ -1,6 +1,6 @@
 <?php
 
-namespace AppBundle\Controller\Api;
+namespace AppBundle\Controller\AdminApi;
 
 use AppBundle\Model\Event\CreateEventModel;
 use AppBundle\Model\EventGroup\EventGroupModel;
@@ -12,7 +12,7 @@ use Symfony\Component\HttpFoundation\JsonResponse;
 use Symfony\Component\HttpFoundation\Request;
 
 /**
- * @Route(service="controller.api.create_event")
+ * @Route(service="controller.admin_api.create_event")
  */
 class CreateEventController
 {
@@ -59,7 +59,8 @@ class CreateEventController
                 isset($data['group']) ? $data['group'] : null
             );
 
-            $event = $this->createEvent->create($data['name'], $eventGroup);
+            $price = isset($data['price']) ? $data['price'] : null;
+            $event = $this->createEvent->create($data['name'], $eventGroup, $price);
 
             return $this->responseCreator->jsonFromEntity($event);
         }

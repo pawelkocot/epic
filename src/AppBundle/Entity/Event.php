@@ -31,6 +31,11 @@ class Event
     private $name;
 
     /**
+     * @ORM\Column(name="`price`", type="string", length=30, nullable=true)
+     */
+    private $price;
+
+    /**
      * @ORM\OneToMany(targetEntity="Reservation", mappedBy="event")
      */
     private $reservations;
@@ -78,6 +83,22 @@ class Event
     public function setName($name)
     {
         $this->name = $name;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getPrice()
+    {
+        return $this->price;
+    }
+
+    /**
+     * @param mixed $price
+     */
+    public function setPrice($price)
+    {
+        $this->price = $price;
     }
 
     /**

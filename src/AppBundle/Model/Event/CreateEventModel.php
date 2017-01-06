@@ -21,13 +21,15 @@ class CreateEventModel
     /**
      * @param string $name
      * @param EventGroup $eventGroup
+     * @param null|string $price
      * @return Event
      */
-    public function create($name, EventGroup $eventGroup)
+    public function create($name, EventGroup $eventGroup, $price = null)
     {
         $event = new Event();
         $event->setName($name);
         $event->setEventGroup($eventGroup);
+        $event->setPrice($price);
 
         $this->eventRepository->saveEntity($event);
 

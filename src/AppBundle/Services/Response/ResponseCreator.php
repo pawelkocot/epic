@@ -53,6 +53,7 @@ class ResponseCreator
                 'groupId' => $entity->getEventGroup()->getId(),
                 'groupName' => $entity->getEventGroup()->getName(),
                 'name' => $entity->getName(),
+                'price' => $entity->getPrice(),
             );
         }
 

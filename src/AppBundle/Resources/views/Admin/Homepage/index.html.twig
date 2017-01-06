@@ -5,17 +5,16 @@
 {% endblock %}
 
 {% block javascripts %}
+    <script type="text/javascript">
+      var globals = {
+        apiUrl: '{{ url('admin_api_root') }}'
+      };
+    </script>
     {% if app.debug %}
-        <script type="text/javascript">
-            var globals = {
-              apiUrl: '{{ url('api_root') }}'
-            };
-        </script>
         <script src="http://localhost:3000/static/js/bundle.js" type="text/javascript"></script>
     {% else %}
-        {% javascripts 'js/build/static/js/*.js' %}
-            <script src="{{ asset_url }}"></script>
-        {% endjavascripts %}
+        <link rel="stylesheet" type="text/css" href="/api/web/js/build/static/css/main.css">
+        <script src="/api/web/js/build/static/js/main.js"></script>
     {% endif %}
 {% endblock %}
 

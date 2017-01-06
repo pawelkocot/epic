@@ -12,6 +12,7 @@ export default ({events}) => (
           <tr>
             <th>ID</th>
             <th>Name</th>
+            <th>Price</th>
             <th>Group</th>
             <th>Actions</th>
           </tr>
