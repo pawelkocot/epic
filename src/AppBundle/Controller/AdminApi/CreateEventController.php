@@ -7,7 +7,6 @@ use AppBundle\Model\EventGroup\EventGroupModel;
 use AppBundle\Services\Response\ResponseCreator;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Method;
-use Sensio\Bundle\FrameworkExtraBundle\Configuration\Security;
 use Symfony\Component\HttpFoundation\JsonResponse;
 use Symfony\Component\HttpFoundation\Request;
 
@@ -44,7 +43,6 @@ class CreateEventController
     /**
      * @Route("/createEvent")
      * @Method({"POST"})
-     * @Security("has_role('ROLE_ADMIN')")
      *
      * @param Request $request
      * @return JsonResponse

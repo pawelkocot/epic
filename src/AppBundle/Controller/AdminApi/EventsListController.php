@@ -6,7 +6,6 @@ use AppBundle\Model\Event\EventsListModel;
 use AppBundle\Services\Response\ResponseCreator;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Method;
-use Sensio\Bundle\FrameworkExtraBundle\Configuration\Security;
 use Symfony\Component\HttpFoundation\JsonResponse;
 
 /**
@@ -33,7 +32,6 @@ class EventsListController
     /**
      * @Route("/events")
      * @Method({"GET"})
-     * @Security("has_role('ROLE_ADMIN')")
      *
      * @return JsonResponse
      */

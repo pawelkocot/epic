@@ -6,7 +6,6 @@ use AppBundle\Model\Reservations\ReservationsListModel;
 use AppBundle\Services\Response\ResponseCreator;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Method;
-use Sensio\Bundle\FrameworkExtraBundle\Configuration\Security;
 use Symfony\Component\HttpFoundation\JsonResponse;
 use Symfony\Component\HttpFoundation\Request;
 /**
@@ -33,7 +32,6 @@ class ReservationsListController
     /**
      * @Route("/reservations/{eventId}")
      * @Method({"GET"})
-     * @Security("has_role('ROLE_ADMIN')")
      *
      * @param Request $request
      * @return JsonResponse

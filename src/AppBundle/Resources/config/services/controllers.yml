@@ -1,4 +1,8 @@
 services:
+    controller.api.register:
+        class: AppBundle\Controller\Api\RegisterController
+        autowire: true
+
     controller.admin_api.event_groups_list:
         class: AppBundle\Controller\AdminApi\EventGroupsListController
         autowire: true
