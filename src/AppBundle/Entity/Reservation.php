@@ -50,6 +50,31 @@ class Reservation
     private $birthDate;
 
     /**
+     * @ORM\Column(type="boolean", nullable=false)
+     */
+    private $insureResign;
+
+    /**
+     * @ORM\Column(type="boolean", nullable=false)
+     */
+    private $insureExtra;
+
+    /**
+     * @ORM\Column(type="boolean", nullable=false)
+     */
+    private $transport;
+
+    /**
+     * @ORM\Column(type="string", length=255, nullable=true)
+     */
+    private $reference;
+
+    /**
+     * @ORM\Column(type="text", nullable=true)
+     */
+    private $comments;
+
+    /**
      * @return int
      */
     public function getId()
@@ -151,5 +176,85 @@ class Reservation
     public function setBirthDate($birthDate)
     {
         $this->birthDate = $birthDate;
+    }
+
+    /**
+     * @return boolean
+     */
+    public function getInsureResign()
+    {
+        return $this->insureResign;
+    }
+
+    /**
+     * @param boolean $insureResign
+     */
+    public function setInsureResign($insureResign)
+    {
+        $this->insureResign = $insureResign;
+    }
+
+    /**
+     * @return boolean
+     */
+    public function getInsureExtra()
+    {
+        return $this->insureExtra;
+    }
+
+    /**
+     * @param boolean $insureExtra
+     */
+    public function setInsureExtra($insureExtra)
+    {
+        $this->insureExtra = $insureExtra;
+    }
+
+    /**
+     * @return boolean
+     */
+    public function getTransport()
+    {
+        return $this->transport;
+    }
+
+    /**
+     * @param boolean $transport
+     */
+    public function setTransport($transport)
+    {
+        $this->transport = $transport;
+    }
+
+    /**
+     * @return string
+     */
+    public function getReference()
+    {
+        return $this->reference;
+    }
+
+    /**
+     * @param string $reference
+     */
+    public function setReference($reference)
+    {
+        $this->reference = $reference;
+    }
+
+    /**
+     * @return string
+     */
+    public function getComments()
+    {
+        return $this->comments;
+    }
+
+    /**
+     * @param string $comments
+     */
+    public function setComments($comments)
+    {
+        $this->comments = $comments;
     }
 }
