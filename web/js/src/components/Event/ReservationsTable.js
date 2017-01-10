@@ -1,15 +1,21 @@
 import React from 'react';
 import {PageHeader, Table} from 'react-bootstrap';
 import ReservationRow from './ReservationRow';
+import {getAdminPanelUrl} from '../../services/config';
 
-export default ({reservations}) => (
+export default ({event, reservations}) => (
   <div>
+    {reservations.length && <a className="btn btn-primary" href={`${getAdminPanelUrl()}csv/${event.id}`}>Export</a> }
     {
       reservations.length
       ? <Table striped={true} bordered={true} hover={true}>
           <thead>
           <tr>
-            <th>ID</th>
+            <th>Date</th>
+            <th>Name/Birth date</th>
+            <th>E-mail/phone</th>
+            <th>Options</th>
+            <th>Reference/comment</th>
           </tr>
           </thead>
           <tbody>

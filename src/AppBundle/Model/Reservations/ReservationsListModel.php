@@ -23,8 +23,9 @@ class ReservationsListModel
      */
     public function getForEvent($eventId)
     {
-        return $this->reservationRepository->findBy(array(
-            'event' => $eventId
-        ));
+        return $this->reservationRepository->findBy(
+            ['event' => $eventId],
+            ['id' => 'desc']
+        );
     }
 }

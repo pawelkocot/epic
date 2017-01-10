@@ -7,3 +7,11 @@ services:
     response_creator:
         class: AppBundle\Services\Response\ResponseCreator
         autowire: true
+
+    reservations_to_csv:
+        class: AppBundle\Services\Csv\ExportReservationsToCsv
+        autowire: true
+
+    reservation_email:
+        class: AppBundle\Services\Email\ReservationEmail
+        autowire: true

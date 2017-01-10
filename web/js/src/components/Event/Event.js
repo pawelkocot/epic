@@ -30,7 +30,7 @@ class EventsContainer extends React.Component {
 
         {reservationsLoading && <div>Loading reservations...</div>}
         {reservationsLoadingFailure && <div>Loading reservations failure: {reservationsLoadingError}</div>}
-        {reservationsLoaded && <ReservationsTable reservations={reservations} />}
+        {reservationsLoaded && <ReservationsTable reservations={reservations} event={event} />}
       </div>
     );
   }

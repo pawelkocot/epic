@@ -3,6 +3,7 @@
 namespace AppBundle\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
+use Symfony\Component\Validator\Constraints as Assert;
 
 /**
  * @ORM\Entity
@@ -27,52 +28,73 @@ class Reservation
     /**
      * @ORM\Column(type="string", length=255, nullable=false)
      */
+    private $createdAt;
+
+    /**
+     * @ORM\Column(type="string", length=255, nullable=false)
+     * @Assert\NotBlank()
+     * @Assert\Type("string")
+     */
     private $firstName;
 
     /**
      * @ORM\Column(type="string", length=255, nullable=false)
+     * @Assert\NotBlank()
+     * @Assert\Type("string")
      */
     private $lastName;
 
     /**
      * @ORM\Column(type="string", length=255, nullable=false)
+     * @Assert\NotBlank()
+     * @Assert\Email()
      */
     private $email;
 
     /**
      * @ORM\Column(type="string", length=50, nullable=false)
+     * @Assert\NotBlank()
+     * @Assert\Type("string")
      */
     private $phone;
 
     /**
      * @ORM\Column(type="string", length=25, nullable=false)
+     * @Assert\NotBlank()
+     * @Assert\Type("string")
+     * @Assert\DateTime(format="d/m/Y")
      */
     private $birthDate;
 
     /**
-     * @ORM\Column(type="boolean", nullable=false)
+     * @ORM\Column(type="boolean", nullable=true)
+     * @Assert\Type("boolean")
      */
     private $insureResign;
 
     /**
-     * @ORM\Column(type="boolean", nullable=false)
+     * @ORM\Column(type="boolean", nullable=true)
+     * @Assert\Type("boolean")
      */
     private $insureExtra;
 
     /**
-     * @ORM\Column(type="boolean", nullable=false)
+     * @ORM\Column(type="boolean", nullable=true)
+     * @Assert\Type("boolean")
      */
     private $transport;
 
     /**
      * @ORM\Column(type="string", length=255, nullable=true)
+     * @Assert\Type("string")
      */
     private $reference;
 
     /**
      * @ORM\Column(type="text", nullable=true)
+     * @Assert\Type("string")
      */
-    private $comments;
+    private $comment;
 
     /**
      * @return int
@@ -96,6 +118,22 @@ class Reservation
     public function setEvent($event)
     {
         $this->event = $event;
+    }
+
+    /**
+     * @return string
+     */
+    public function getCreatedAt()
+    {
+        return $this->createdAt;
+    }
+
+    /**
+     * @param string $createdAt
+     */
+    public function setCreatedAt($createdAt)
+    {
+        $this->createdAt = $createdAt;
     }
 
     /**
@@ -175,6 +213,8 @@ class Reservation
      */
     public function setBirthDate($birthDate)
     {
+//        $birthDate = date("Y-m-d", strtotime($birthDate));
+
         $this->birthDate = $birthDate;
     }
 
@@ -245,16 +285,16 @@ class Reservation
     /**
      * @return string
      */
-    public function getComments()
+    public function getComment()
     {
-        return $this->comments;
+        return $this->comment;
     }
 
     /**
-     * @param string $comments
+     * @param string $comment
      */
-    public function setComments($comments)
+    public function setComment($comment)
     {
-        $this->comments = $comments;
+        $this->comment = $comment;
     }
 }

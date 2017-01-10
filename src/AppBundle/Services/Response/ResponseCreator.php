@@ -3,6 +3,8 @@
 namespace AppBundle\Services\Response;
 
 use AppBundle\Entity\Event;
+use AppBundle\Entity\Reservation;
+use AppBundle\Services\EntityReducer\EntityReducer;
 use Symfony\Component\HttpFoundation\JsonResponse;
 use Symfony\Component\Serializer\Serializer;
 
@@ -13,9 +15,10 @@ class ResponseCreator
      */
     private $serializer;
 
-    public function __construct(Serializer $serializer)
+    public function __construct(Serializer $serializer, EntityReducer $entityReducer)
     {
         $this->serializer = $serializer;
+        $this->entityReducer = $entityReducer;
     }
 
     /**
@@ -24,39 +27,11 @@ class ResponseCreator
      */
     public function jsonFromEntity($entity)
     {
-        $entity = $this->reduceEntity($entity);
+        $entity = $this->entityReducer->reduceEntity($entity);
 
         return JsonResponse::fromJsonString($this->serializer->serialize(
             $entity,
             'json'
         ));
-    }
-
-    /**
-     * @param $entity
-     * @return mixed
-     */
-    public function reduceEntity($entity)
-    {
-        if (is_array($entity)) {
-            return array_map(
-                function ($entity) {
-                    return $this->reduceEntity($entity);
-                },
-                $entity
-            );
-        }
-
-        if ($entity instanceof Event) {
-            return array(
-                'id' => $entity->getId(),
-                'groupId' => $entity->getEventGroup()->getId(),
-                'groupName' => $entity->getEventGroup()->getName(),
-                'name' => $entity->getName(),
-                'price' => $entity->getPrice(),
-            );
-        }
-
-        return $entity;
     }
 }

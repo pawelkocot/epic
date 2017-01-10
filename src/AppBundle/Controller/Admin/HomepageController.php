@@ -11,7 +11,7 @@ class HomepageController extends Controller
 {
     /**
      *
-     * @Route("/")
+     * @Route("/", name="admin_homepage")
      * @Template()
      * @Security("has_role('ROLE_ADMIN')")
      */
