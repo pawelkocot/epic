@@ -3,6 +3,7 @@
 namespace AppBundle\Services\EntityReducer;
 
 use AppBundle\Entity\Event;
+use AppBundle\Entity\EventGroup;
 use AppBundle\Entity\Reservation;
 
 class EntityReducer
@@ -30,6 +31,13 @@ class EntityReducer
                 'groupName' => $entity->getEventGroup()->getName(),
                 'name' => $entity->getName(),
                 'price' => $entity->getPrice(),
+            );
+        }
+
+        if ($entity instanceof EventGroup) {
+            return array(
+                'id' => $entity->getId(),
+                'name' => $entity->getName()
             );
         }
 
