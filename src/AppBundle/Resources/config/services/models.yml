@@ -14,6 +14,12 @@ services:
         arguments:
           - '@repository.event'
 
+    model.reservations.list:
+        class: AppBundle\Model\Reservations\ReservationsListModel
+        arguments:
+          - '@repository.reservation'
+
+
     model.reservations.create:
         class: AppBundle\Model\Reservations\CreateReservationModel
         arguments:
