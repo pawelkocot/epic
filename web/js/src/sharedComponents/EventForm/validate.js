@@ -9,5 +9,9 @@ export default values => {
     errors.name = 'Required';
   }
 
+  if (!values.price) {
+    errors.price = 'Required';
+  }
+
   return errors;
 }

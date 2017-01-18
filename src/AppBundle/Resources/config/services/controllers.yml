@@ -14,7 +14,3 @@ services:
     controller.admin_api.events_list:
         class: AppBundle\Controller\AdminApi\EventsListController
         autowire: true
-
-    controller.admin_api.reservations_list:
-        class: AppBundle\Controller\AdminApi\ReservationsListController
-        autowire: true

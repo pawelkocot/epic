@@ -53,7 +53,7 @@ const mapStateToProps = state => {
 
   return {
     ...state.app.events,
-    events: events.filter(event => groupIdFilter ? event.groupId == groupIdFilter : true),
+    events: events.filter(event => groupIdFilter ? parseInt(event.groupId, 10) === parseInt(groupIdFilter, 10) : true),
     eventGroups: sortBy(eventGroups, group => group.id).reverse(),
     groupIdFilter
   };

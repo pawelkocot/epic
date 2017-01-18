@@ -22,6 +22,16 @@ class EventsListModel
      */
     public function getAllEvents()
     {
-        return $this->eventRepository->findAll();
+        $query = $this->eventRepository->getManager()
+            ->createQueryBuilder()
+            ->select('e, r, eg, att')
+            ->from(Event::class, 'e')
+            ->leftJoin('e.reservations', 'r')
+            ->leftJoin('e.eventGroup', 'eg')
+            ->leftJoin('e.attachments', 'att')
+            ->orderBy('e.id', 'DESC')
+            ->getQuery();
+
+        return $query->getResult();
     }
 }

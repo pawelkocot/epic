@@ -5,6 +5,7 @@ import AppWrapper from './AppWrapper';
 import EventsContainer from './Events/EventsContainer';
 import AddEventContainer from './AddEvent/AddEventContainer';
 import Event from './Event/Event';
+import EmailsContainer from './Emails/EmailsContainer';
 
 export default ({history, children}) => (
   <Router history={history}>
@@ -12,6 +13,7 @@ export default ({history, children}) => (
       <IndexRoute component={EventsContainer}/>
       <Route path={'/add-event'} component={AddEventContainer} />
       <Route path={'/event/:id'} component={Event} />
+      <Route path={'/emails'} component={EmailsContainer} />
     </Route>
   </Router>
 );

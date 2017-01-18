@@ -2,6 +2,7 @@
 
 namespace AppBundle\Services\EntityReducer;
 
+use AppBundle\Entity\Attachment;
 use AppBundle\Entity\Event;
 use AppBundle\Entity\EventGroup;
 use AppBundle\Entity\Reservation;
@@ -31,6 +32,8 @@ class EntityReducer
                 'groupName' => $entity->getEventGroup()->getName(),
                 'name' => $entity->getName(),
                 'price' => $entity->getPrice(),
+                'reservations' => array_map([$this, 'reduceEntity'], $entity->getReservations()->toArray()),
+                'attachments' => array_map([$this, 'reduceEntity'], $entity->getAttachments()->toArray()),
             );
         }
 
@@ -38,6 +41,13 @@ class EntityReducer
             return array(
                 'id' => $entity->getId(),
                 'name' => $entity->getName()
+            );
+        }
+
+        if ($entity instanceof Attachment) {
+            return array(
+                'id' => $entity->getId(),
+                'file' => $entity->getFile()
             );
         }
 

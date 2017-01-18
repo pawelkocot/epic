@@ -3,11 +3,11 @@ import {PageHeader, Table} from 'react-bootstrap';
 import ReservationRow from './ReservationRow';
 import {getAdminPanelUrl} from '../../services/config';
 
-export default ({event, reservations}) => (
+export default ({event}) => (
   <div>
-    {reservations.length && <a className="btn btn-primary" href={`${getAdminPanelUrl()}csv/${event.id}`}>Export</a> }
+    {event.reservations.length && <a className="btn btn-primary" href={`${getAdminPanelUrl()}csv/${event.id}`}>Export</a> }
     {
-      reservations.length
+      event.reservations.length
       ? <Table striped={true} bordered={true} hover={true}>
           <thead>
           <tr>
@@ -19,7 +19,7 @@ export default ({event, reservations}) => (
           </tr>
           </thead>
           <tbody>
-          {reservations.map((reservation, key) => (
+          {event.reservations.map((reservation, key) => (
             <ReservationRow reservation={reservation} key={key} />
           ))}
           </tbody>

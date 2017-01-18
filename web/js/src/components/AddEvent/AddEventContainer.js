@@ -8,7 +8,7 @@ import submitForm from './submitForm';
 
 class AddEventContainer extends React.Component {
   componentWillMount() {
-    if (!this.props.loading) {
+    if (!this.props.eventGroups.loading && !this.props.eventGroups.loaded) {
       this.props.loadEventGroups();
     }
   }
@@ -33,7 +33,15 @@ class AddEventContainer extends React.Component {
 
 
 const mapStateToProps = state => ({
-  ...state.app.eventGroups,
+  eventGroupsState: {
+    loading: state.app.eventGroups.loading,
+    loaded: state.app.eventGroups.loaded,
+  },
+  eventGroups: state.app.eventGroups.eventGroups,
+  loading: state.app.eventGroups.loading,
+  loaded: state.app.eventGroups.loaded,
+  failure: state.app.eventGroups.failure,
+  errorMessage: state.app.eventGroups.errorMessage
 });
 
 const mapDispatchToProps = {

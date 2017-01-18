@@ -17,7 +17,6 @@ export const loadEvents = () => (dispatch) => {
   loadEventsRequest()
     .then(events => dispatch(eventsLoadingSuccess(events)))
     .catch(error => {
-      console.log(error);
       dispatch(eventsLoadingFailure(error))
     })
 };

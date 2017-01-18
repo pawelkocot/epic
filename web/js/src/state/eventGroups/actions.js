@@ -15,7 +15,6 @@ export const loadEventGroups = () => (dispatch) => {
   loadEventsRequest()
     .then(events => dispatch(requestSuccess(events)))
     .catch(error => {
-      console.log(error);
       dispatch(requestFailure(error))
     })
 };

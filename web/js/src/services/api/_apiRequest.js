@@ -14,7 +14,6 @@ const createUrl = endpoint => {
 }
 
 const request = (endpoint, method, data) => new Promise((resolve, reject) => {
-  console.log(data);
   const url = createUrl(endpoint);
   const options = {
     method,

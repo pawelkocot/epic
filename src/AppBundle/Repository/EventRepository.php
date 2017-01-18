@@ -19,4 +19,12 @@ class EventRepository extends EntityRepository
             $this->_em->flush();
         }
     }
+
+    /**
+     * @return \Doctrine\ORM\EntityManager
+     */
+    public function getManager()
+    {
+        return $this->getEntityManager();
+    }
 }

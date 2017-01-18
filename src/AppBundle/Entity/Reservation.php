@@ -47,7 +47,7 @@ class Reservation
     /**
      * @ORM\Column(type="string", length=255, nullable=false)
      * @Assert\NotBlank()
-     * @Assert\Email()
+     * @Assert\Email(strict=true)
      */
     private $email;
 

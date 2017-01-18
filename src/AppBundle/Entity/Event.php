@@ -36,13 +36,19 @@ class Event
     private $price;
 
     /**
-     * @ORM\OneToMany(targetEntity="Reservation", mappedBy="event")
+     * @ORM\OneToMany(targetEntity="AppBundle\Entity\Reservation", mappedBy="event")
      */
     private $reservations;
+
+    /**
+     * @ORM\OneToMany(targetEntity="AppBundle\Entity\Attachment", mappedBy="event")
+     */
+    private $attachments;
 
     public function __construct()
     {
         $this->reservations = new ArrayCollection();
+        $this->attachments = new ArrayCollection();
     }
 
     /**
@@ -108,4 +114,13 @@ class Event
     {
         return $this->reservations;
     }
+
+    /**
+     * @return ArrayCollection
+     */
+    public function getAttachments()
+    {
+        return $this->attachments;
+    }
+
 }
