@@ -5,6 +5,7 @@
 /.idea/*
 /.idea
 /.idea/
+/.idea/workspace.xml
 !/var/cache
 /var/cache/*
 !var/cache/.gitkeep
