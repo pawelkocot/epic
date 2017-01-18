@@ -4,6 +4,7 @@
 /var/*
 /.idea/*
 /.idea
+/.idea/
 !/var/cache
 /var/cache/*
 !var/cache/.gitkeep
