@@ -27,4 +27,12 @@ class EventRepository extends EntityRepository
     {
         return $this->getEntityManager();
     }
+
+    /**
+     * @return \Doctrine\DBAL\Connection
+     */
+    public function getConnection()
+    {
+        return $this->getEntityManager()->getConnection();
+    }
 }

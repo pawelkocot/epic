@@ -12,3 +12,8 @@ api:
     resource: "@AppBundle/Controller/Api"
     type:     annotation
     prefix:   /
+
+root:
+    resource: "@AppBundle/Controller/RootController.php"
+    type:     annotation
+    prefix:   /

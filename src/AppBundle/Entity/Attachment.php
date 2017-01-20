@@ -25,7 +25,12 @@ class Attachment
     /**
      * @ORM\Column(type="string", length=512, nullable=false)
      */
-    private $file;
+    private $filePath;
+
+    /**
+     * @ORM\Column(type="string", length=512, nullable=false)
+     */
+    private $fileName;
 
     /**
      * @return int
@@ -38,16 +43,49 @@ class Attachment
     /**
      * @return string
      */
-    public function getFile()
+    public function getFilePath()
     {
-        return $this->file;
+        return $this->filePath;
     }
 
     /**
-     * @param string $file
+     * @param string $filePath
      */
-    public function setFile($file)
+    public function setFilePath($filePath)
     {
-        $this->file = $file;
+        $this->filePath = $filePath;
+    }
+
+    /**
+     * @return string
+     */
+    public function getFileName()
+    {
+        return $this->fileName;
+    }
+
+    /**
+     * @param string $fileName
+     */
+    public function setFileName($fileName)
+    {
+        $this->fileName = $fileName;
+    }
+
+
+    /**
+     * @return Event
+     */
+    public function getEvent()
+    {
+        return $this->event;
+    }
+
+    /**
+     * @param Event $event
+     */
+    public function setEvent($event)
+    {
+        $this->event = $event;
     }
 }

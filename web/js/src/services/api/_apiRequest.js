@@ -1,7 +1,7 @@
 import fetch from 'isomorphic-fetch';
 import {getApiUrl} from '../config';
 
-const createUrl = endpoint => {
+export const createUrl = endpoint => {
   let url = getApiUrl();
 
   if (url.match(/\/$/) && endpoint.match(/^\//)) {

@@ -3,6 +3,9 @@ imports:
     - { resource: services/models.yml }
     - { resource: services/controllers.yml }
 
+parameters:
+    upload_directory: '%kernel.root_dir%/../web/uploads'
+
 services:
     response_creator:
         class: AppBundle\Services\Response\ResponseCreator
@@ -15,3 +18,9 @@ services:
     reservation_email:
         class: AppBundle\Services\Email\ReservationEmail
         autowire: true
+
+    event_attachment_file_uploader:
+        class: AppBundle\Services\FileUploader\EventAttachmentFileUploader
+        arguments:
+          - '%upload_directory%'
+          - '@repository.event'

@@ -14,3 +14,10 @@ services:
     controller.admin_api.events_list:
         class: AppBundle\Controller\AdminApi\EventsListController
         autowire: true
+
+    controller.admin_api.upload_attachment:
+        class: AppBundle\Controller\AdminApi\UploadAttachmentController
+        arguments:
+          - '@repository.event'
+          - '@event_attachment_file_uploader'
+          - '@response_creator'

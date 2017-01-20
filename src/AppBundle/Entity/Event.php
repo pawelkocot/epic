@@ -122,5 +122,4 @@ class Event
     {
         return $this->attachments;
     }
-
 }

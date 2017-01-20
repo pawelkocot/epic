@@ -30,6 +30,7 @@ class EventsListModel
             ->leftJoin('e.eventGroup', 'eg')
             ->leftJoin('e.attachments', 'att')
             ->orderBy('e.id', 'DESC')
+            ->orderBy('r.id', 'DESC')
             ->getQuery();
 
         return $query->getResult();

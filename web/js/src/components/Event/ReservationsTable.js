@@ -5,7 +5,7 @@ import {getAdminPanelUrl} from '../../services/config';
 
 export default ({event}) => (
   <div>
-    {event.reservations.length && <a className="btn btn-primary" href={`${getAdminPanelUrl()}csv/${event.id}`}>Export</a> }
+    {event.reservations.length ? <a className="btn btn-primary" href={`${getAdminPanelUrl()}csv/${event.id}`}>Export</a> : null}
     {
       event.reservations.length
       ? <Table striped={true} bordered={true} hover={true}>

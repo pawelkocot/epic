@@ -6,9 +6,20 @@ use AppBundle\Entity\Attachment;
 use AppBundle\Entity\Event;
 use AppBundle\Entity\EventGroup;
 use AppBundle\Entity\Reservation;
+use AppBundle\Services\FileUploader\EventAttachmentFileUploader;
 
 class EntityReducer
 {
+//    /**
+//     * @var EventAttachmentFileUploader
+//     */
+//    private $eventAttachmentFileUploader;
+//
+//    public function __construct(EventAttachmentFileUploader $eventAttachmentFileUploader)
+//    {
+//        $this->eventAttachmentFileUploader = $eventAttachmentFileUploader;
+//    }
+
     /**
      * @param $entity
      * @return array
@@ -47,7 +58,9 @@ class EntityReducer
         if ($entity instanceof Attachment) {
             return array(
                 'id' => $entity->getId(),
-                'file' => $entity->getFile()
+                'fileName' => $entity->getFileName(),
+                'filePath' => $entity->getFilePath(),
+//                'path' => $this->eventAttachmentFileUploader->getFilePath($entity),
             );
         }
 
