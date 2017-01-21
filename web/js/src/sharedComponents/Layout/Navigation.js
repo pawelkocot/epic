@@ -11,9 +11,9 @@ export default ({children}) => (
       <LinkContainer to="/add-event">
         <NavItem eventKey={2}>Add event</NavItem>
       </LinkContainer>
-      <LinkContainer to="/emails">
-        <NavItem eventKey={3}>Emails</NavItem>
-      </LinkContainer>
+      {/*<LinkContainer to="/emails">*/}
+        {/*<NavItem eventKey={3}>Emails</NavItem>*/}
+      {/*</LinkContainer>*/}
     </Nav>
     {/*<Nav pullRight>*/}
       {/*<NavItem eventKey={1} href="/logout">Logout</NavItem>*/}
