@@ -62,7 +62,11 @@ class Reservation
      * @ORM\Column(type="string", length=25, nullable=false)
      * @Assert\NotBlank()
      * @Assert\Type("string")
-     * @Assert\DateTime(format="d/m/Y")
+     * @Assert\Regex(
+     *     pattern="/^\d{4}\-\d{2}\-\d{2}$/",
+     *     message="Niepoprawny format daty"
+     * )
+     * @Assert\DateTime(format="Y-m-d")
      */
     private $birthDate;
 
